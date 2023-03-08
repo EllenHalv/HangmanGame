@@ -9,20 +9,22 @@ public class Word {
             guess += "-";
         }
     }
+    //returnerar ordet
     public String getWord() {
         return word;
     }
-    //returnerar ordet
+    //returnerar det gissade ordet
     public String getGuess() {
         return guess;
     }
-    //returnerar det gissade ordet
+    //kollar om en given bokstav matchar någon i ordet
     public boolean matchGuess(char letter) {
         return word.contains(Character.toString(letter));
     }
-    //kollar om en given bokstav matchar någon i ordet
+    //kollar om ett givet ord matchar gissningen
     public boolean matchWord(String guess) { return word.contains(guess); }
 
+    //ersätter alla matchande streck i ordet med en bokstav
     public String displayLetter(char letter) {
         String newGuess = "";
         for (int i = 0; i < word.length(); i++) {
@@ -35,11 +37,10 @@ public class Word {
         guess = newGuess;
         return guess;
     }
-    //ersätter alla matchande streck i ordet med en bokstav
 
+    //Kollar om det gissade ordet är som det man ska gissa på
     public boolean hasWon() {
         return guess.equals(word);
     }
-    //Kollar om det gissade ordet är som det man ska gissa på
 
 }

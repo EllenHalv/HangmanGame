@@ -17,9 +17,11 @@ class WordList {
         wordList.add("tofflor");
         wordList.add("aprilskämt");
     }
+    //skriver ut listan
     public void showWordList() {
         System.out.println(wordList);
     }
+    //lägger till ett ord i listan
     public void addWord() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Skriv in ett ord du vill lägga till: ");
@@ -28,6 +30,7 @@ class WordList {
         System.out.println('"' + word + '"' + " har lagts till i listan.");
         showWordList();
     }
+    //ber om ett ord från användaren och tar bort ordet
     public void removeWord() {
         showWordList();
         Scanner scanner = new Scanner(System.in);
@@ -40,9 +43,11 @@ class WordList {
             System.out.println(deleteWord + " finns inte i listan.");
         }
     }
+    //returnerar det valda ordet
     public String getWord() {
         return word;
     }
+    //returnerar ett random ord från listan
     public String randomWord() {
         Random random = new Random();
         word = wordList.get(random.nextInt(wordList.size()));

@@ -8,6 +8,7 @@ public class Player {
         this.guesses = guesses;
         this.points = points;
     }
+    //skriver ut namnet (med stor första bokstav)
     public String getName() {
         String firstLetter = name.substring(0, 1).toUpperCase();
         String restOfLetters = name.substring(1);
@@ -15,14 +16,15 @@ public class Player {
         name = capName;
         return name;
     }
+    //returnera antalet gissningar spelaren har gjort
     public int getGuesses() {
         return guesses;
     }
-    //returnera antalet gissningar spelaren har gjort
+    //returnera antalet rätt gissningar spelaren har gjort
     public int getPoints() {
         return points;
     }
-    //returnera antalet rätt gissningar spelaren har gjort
+    //öka antalet gissningar
     public void increaseGuesses() {
         guesses++;
     }
@@ -31,6 +33,7 @@ public class Player {
         points++;
     }
     // Returnera en sträng med spelarens namn, antal gissningar och antal rätt gissningar
+    //visa poängställning
     public void showStandings() {
         System.out.println("\n" + getName() + " har gjort " + getGuesses() + " gissningar och har " + getPoints() + " rätt gissningar");
     }

@@ -10,6 +10,7 @@ public class Game {
     public Game (WordList wordList) {
         this.wordList = wordList;
     }
+    //startar spelet och while-loop håller igång spelet tills användaren har gissat rätt
     public void startGame() {
         System.out.println("[Skapa ny spelare]");
 
@@ -35,8 +36,8 @@ public class Game {
             }
         }
     }
+    //hanterar gissningarna
     private void guess() {
-        //DELAS GÄRNA UPP I FLER METODER
         Scanner scanner = new Scanner(System.in);
         player.showStandings();
         System.out.println("Du har gissat bokstäverna: " + guessedObjects);
@@ -84,9 +85,11 @@ public class Game {
             }
         }
     }
+    //kollar om användaren har vunnit
     private boolean winnerCheck() {
        return word.hasWon();
     }
+    //avslutar spelet
     public void endGame() {
         System.out.println("Avslutar programmet...");
         System.exit(0);

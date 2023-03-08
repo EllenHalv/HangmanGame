@@ -5,6 +5,7 @@ public class Menu {
     WordList wordList = new WordList();
     Game game = new Game(wordList);
 
+    // metod för menu som ligger i en while-loop
     public void showMenu() {
         boolean showMenu = true;
         Scanner scanner = new Scanner(System.in);
@@ -24,6 +25,7 @@ public class Menu {
             checkMenuChoice();
         }
     }
+    //hanterar användarens meny-val
     private void checkMenuChoice() {
             switch (choice) {
                 case 1 -> game.startGame();
